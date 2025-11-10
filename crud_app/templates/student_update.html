@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <form method="POST">
+  {% csrf_token %}
+  Name: <input type="text" name="name" value="{{ student.name }}"><br><br>
+  Email: <input type="email" name="email" value="{{ student.email }}"><br><br>
+  Age: <input type="number" name="age" value="{{ student.age }}"><br><br>
+  Address: <input type="text" name="address" value="{{student.address}}"><br><br>
+  Salary: <input type="number" name="salary" value="{{student.salary}}">
+  image: <input type="file" name="image" value="{{student.image.url}}"><br><br>
+    <button type="submit">Update</button>
+</form>
+<a href="{% url 'student_list' %}">Back</a>
+</body>
+</html>

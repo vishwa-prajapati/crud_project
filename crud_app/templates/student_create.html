@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    name <input name="name" type="text">
+    Email <input name="email" type="email">
+    age <input name="age" type="number">
+    salary<input name="salary" type="number">
+    address <input name="address" type="text">
+    image <input name="image" type="file">
+    <button type="submit">Submit</button>
+     </form>
+</body>
+</html>
